@@ -28,6 +28,14 @@ export const config = figue({
       env: 'VITE_VERCEL_ENV',
     },
   },
+  opencc: {
+    apiUrl: {
+      doc: 'REST API URL',
+      format: 'string',
+      default: 'http://localhost:8080',
+      env: 'VITE_OPENCC_API_BASEURL',
+    },
+  },
   plausible: {
     isTrackerEnabled: {
       doc: 'Is the tracker enabled',

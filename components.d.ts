@@ -34,6 +34,7 @@ declare module '@vue/runtime-core' {
     CDiffEditor: typeof import('./src/ui/c-diff-editor/c-diff-editor.vue')['default']
     CFileUpload: typeof import('./src/ui/c-file-upload/c-file-upload.vue')['default']
     'CFileUpload.demo': typeof import('./src/ui/c-file-upload/c-file-upload.demo.vue')['default']
+    ChineseConverter: typeof import('./src/tools/chinese-converter/chinese-converter.vue')['default']
     ChmodCalculator: typeof import('./src/tools/chmod-calculator/chmod-calculator.vue')['default']
     Chronometer: typeof import('./src/tools/chronometer/chronometer.vue')['default']
     CInputText: typeof import('./src/ui/c-input-text/c-input-text.vue')['default']
