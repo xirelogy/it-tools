@@ -30,6 +30,8 @@ coverage
 *.sw?
 
 .env
+.env.development
+.env.production
 /test-results/
 /playwright-report/
 /playwright/.cache/
