@@ -109,31 +109,33 @@ async function onTraditionalInputUpdate(value: string) {
 
 <template>
   <div>
-    <c-select
-      v-model:value="optionIndex"
-      :options="options.map(({ name }, i) => ({ label: name, value: i }))"
-      data-test-id="option-select"
+    <div>
+      <c-select
+        v-model:value="optionIndex"
+        :options="options.map(({ name }, i) => ({ label: name, value: i }))"
+        data-test-id="option-select"
+      />
+    </div>
+
+    <c-input-text 
+      v-model:value="simplifiedText"
+      multiline
+      placeholder="e.g. '简体中文'"
+      label="Enter simplified chinese text"
+      autosize autofocus raw-text
+      @update:value="onSimplifiedInputUpdate"
+      test-id="simplified-input"
+    />
+    <c-input-text
+      v-model:value="traditionalText"
+      multiline
+      placeholder="e.g. '繁體中文'"
+      label="Enter traditional chinese text"
+      autosize raw-text
+      @update:value="onTraditionalInputUpdate"
+      test-id="traditional-input"
     />
   </div>
-
-  <c-input-text 
-    v-model:value="simplifiedText"
-    multiline
-    placeholder="e.g. '简体中文'"
-    label="Enter simplified chinese text"
-    autosize autofocus raw-text
-    @update:value="onSimplifiedInputUpdate"
-    test-id="simplified-input"
-  />
-  <c-input-text
-    v-model:value="traditionalText"
-    multiline
-    placeholder="e.g. '繁體中文'"
-    label="Enter traditional chinese text"
-    autosize raw-text
-    @update:value="onTraditionalInputUpdate"
-    test-id="traditional-input"
-  />
 
   <c-modal ref="refErrorModal">
     <c-alert type="error">{{ errorModalContent }}</c-alert>
