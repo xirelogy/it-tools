@@ -91,7 +91,7 @@ async function onTraditionalInputUpdate(value: string) {
     const option = options[optionIndex.value] ?? null;
     if (option === null) return;
 
-    if (simplifiedText.value.length <= 0) return;
+    if (traditionalText.value.length <= 0) return;
 
     try {
       const result = await callOpenApi(value, option.topt);
